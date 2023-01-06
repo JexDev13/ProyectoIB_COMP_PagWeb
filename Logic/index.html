@@ -1,54 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Diapositivas</title>
-	<style type="text/css">
-		.slide {
-			width: 100%;
-			height: 100%;
-		}
+<html lang="en">
 
-	</style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-sacle=1.0">
+  <title>Compiladores Primer Bimestre</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
 
-  <div class="slide"> 
 
-   <img src="C:\Users\Isma2\OneDrive - Escuela Politécnica Nacional\Documentos\SOFTWARE CUARTO SEMESTRE\Compiladores\PaginaWeb\fondo.jpg" width="100%" height="100%">
+  <section id="sec1"> <!--section es para divir una unica pagina en distintas secciones, para hacerle tio diapos-->
+    <h1>COMPILADORES Y LENGUAJES</h1>
 
-  </div>
+    <div class="middle">
+      <a href="" class="btn btn1">Comenzar</a>
+    </div>
+  </section>
 
-  <div class="slide"> 
-
-   <img src="C:\Users\Isma2\OneDrive - Escuela Politécnica Nacional\Documentos\SOFTWARE CUARTO SEMESTRE\Compiladores\PaginaWeb\meme.png" width="100%" height="100%">
-
-  </div>
-
-  <div class="slide"> 
-
-   <img src="C:\Users\Isma2\OneDrive - Escuela Politécnica Nacional\Documentos\SOFTWARE CUARTO SEMESTRE\Compiladores\PaginaWeb\lights.png" width="100%" height="100%">
-
-  </div>
-
-  <script type="text/javascript">
-   var slideIndex = 0; //Indice de diapositiva actual
-   showSlides(); //Mostrar diapositivas automáticamente al cargar la página web.
-
-   function showSlides() { //Función para mostrar las diapositivas.
-    var i; //Variable para el bucle for.
-    var slides = document.getElementsByClassName("slide"); //Obtener todas las diapositivas en un array.
-
-    for (i = 0; i < slides.length; i++) { //Bucle for para ocultar todas las diapositivas al inicio de la página web.
-     slides[i].style.display = "none";  
-    }
-
-    slideIndex++; //Aumentar el índice de la diapositiva en 1 cada vez que se ejecuta la función showSlides(). Esto hará que se muestre la siguiente diapositiva cada vez que se ejecute la función showSlides(). Si llega al final del array, volverá a empezar desde el principio (índice 0).
-
-    if (slideIndex > slides.length) {slideIndex = 1} //Si el índice de la diapositiva es mayor que el número total de diapositivas, volver a empezar desde el principio (índice 0).    
-
-    slides[slideIndex-1].style.display = "block"; //Mostrar la siguiente diapositiva (el índice debe ser -1 ya que los arrays comienzan en 0).    
-
-    setTimeout(showSlides, 2000); //Cambiar automáticamente a la siguiente diapositiva cada 2 segundos (2000 milisegundos).    
-   }     
-  </script>     
+  <script>
+  </script>
 </body>
