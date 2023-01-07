@@ -1,25 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" 0 content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-sacle=1.0">
   <title>Compiladores Primer Bimestre</title>
   <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/c7af2756e7.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+  <header>
+    <a href="easteregg.html" target="_blank" class="logo">FIS COMPILER</a>
+    
+    <nav>
+      <ul>
+        <li><a href="#sec1">Inicio</a></li>
+        <li><a href="">Aprendizaje</a>
+          <ul>
+            <li><a href="#sec2">Seccion 1</a></li>
+            <li><a href="#sec3">Seccion 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#secfinal">Contactos</a></li>
+      </ul>
+    </nav>
+  </header>
 
 
-  <section id="sec1"> <!--section es para divir una unica pagina en distintas secciones, para hacerle tio diapos-->
-    <h1>COMPILADORES Y LENGUAJES</h1>
-
-    <div class="middle">
-      <a href="" class="btn btn1">Comenzar</a>
+  <section id="sec1">
+    <div class="contenedor-texto">
+      <h1>COMPILADORES Y LENGUAJES</h1>
+      <a href="#sec2" class="btn btn1">Comenzar</a>
     </div>
   </section>
 
-  <script>
+
+
+
+
+  <section id="sec2">
+
+
+
+
+
+  </section>
+
+  <section id="sec3">
+
+    <!--ESTA ES LA PLANTILLA DE COMO DEBEN HACER LAS 
+      SECCIONES PARA EL CONTENIDO QUE VALLAN AGREGAR-->
+
+  </section>
+
+  <section id="secfinal">
+
+    <!--ESTA ES LA PLANTILLA DE CONTACTOS-->
+
+    <div class="box1">
+      <h4>Jeremy Arias</h4>
+
+      <ul>
+        <li><a href="https://www.instagram.com/muerto_andante13/" target="_blank"><i
+              class="fa-brands fa-instagram"></i>muerto_andante13</a></li>
+        <li><a href="https://github.com/JexDev13/ProyectoIB_COMP_PagWeb.git" target="_blank"><i
+              class="fa-brands fa-github"></i> Jex_dev13</a></li>
+      </ul>
+
+    </div>
+
+    <div class="box2">
+      <h4>Marlow Armijo</h4>
+      <ul>
+        <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i>usuario</a></li>
+        <li><a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i> usuario</a></li>
+      </ul>
+
+    </div>
+
+    <div class="box3">
+      <h4>Jhonathan Salazar</h4>
+      <ul>
+        <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i>usuario</a></li>
+        <li><a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i> usuario</a></li>
+      </ul>
+    </div>
+
+
+  </section>
+
+  <script type="text/javascript">
+    window.addEventListener("scroll",
+      function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("abajo", window.scrollY > 750);
+      })
   </script>
+
 </body>
