@@ -1,4 +1,4 @@
-
+/*MARGENES Y PANTALLA*/
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +6,7 @@
     /*ESTE ES EL FORMATO PARA AJUSTARSE CON LA PANTALLA*/
 }
 
+/*MENU Y ENCABEZADO*/
 header {
     position: fixed;
     top: 0;
@@ -38,19 +39,18 @@ header .logo {
     letter-spacing: 2px;
     transition: 1.5s;
     text-decoration: none;
-    
+
 }
 
 nav {
-    
+
     display: block;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-nav li a
-{
+nav li a {
     left: 40%;
     position: relative;
     display: flex;
@@ -58,27 +58,23 @@ nav li a
     align-items: center;
 }
 
-nav li a:hover
-{
+nav li a:hover {
     padding: 11px;
     background-color: rgba(0, 0, 0, 0.322);
 
 }
 
-nav > li
-{
+nav>li {
     float: left;
 }
 
-nav li ul
-{
+nav li ul {
     display: none;
     position: absolute;
     min-height: 140px;
 }
 
-nav li:hover > ul
-{
+nav li:hover>ul {
     display: block;
 }
 
@@ -89,7 +85,7 @@ header ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 header ul li {
@@ -108,28 +104,23 @@ header ul li a {
     transition: 0.7s;
 }
 
+/*FORMATO GENERAL PARA SECCIONES*/
 section {
     height: 760px;
     display: flex;
     justify-content: space-evenly;
     padding: 0 40px;
     align-items: center;
-    /*ESTE ES EL FORMATO PARA LA PRESENTACION DE 
-    LAS SECCIONES RECOMIENDO NO MODIFICAR*/
 }
 
-section:nth-child(2) {/*se pone el index siguiente al que se hace referencia para ordenar por la forma en que se programo el header*/
-    /*EN CASO DE QUE QUIERAN USAR IMAGENES 
-    EN LUGAR DE GRADIENTES ASI SE DECLARAN*/
+/*SECCION 1*/
+section:nth-child(2) {
     background-image: url("../Imagenes/fondo_1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 h1 {
-    /*ESTE ES UN EJEMPLO DE COMO CONFIGURE MIS LETRAS
-    COMO LA HAGAN USETEDES DEPENDERA DE SUS NECESIDADES 
-    Y CREATIVIDAD*/
     font-size: 80px;
     font-family: Consolas;
     color: #ffffff;
@@ -145,25 +136,48 @@ h1 {
     animation: typing 4s steps(30) 1s 1 normal, blink 1s steps(1) infinite alternate-reverse;
 }
 
-section a { 
+@keyframes typing {
 
-    /*EL CODIGO DE COMO SE DA FORMATO AL BOTON, EN CASO DE
-    QUE USEN BOTONES PUEDEN ISPIRARSE DE ESTO*/
+    from {
+        width: 0;
+    }
 
-    display: block;
-    padding: 7px 0;
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/*BOTON SECCION 1*/
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #9c27b0;
+    color: #fff;
     text-decoration: none;
-    text-align: center;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background: #9c27b0;
+}
+
+.btn:hover {
+    background: none;
 
 }
 
-.btn {
+.btn-home {
+    display: flex;
+}
 
-    /*EL CODIGO DE COMO SE DA LA ANIMACION AL BOTON, EN CASO DE
-    QUE USEN BOTONES PUEDEN ISPIRARSE DE ESTO*/
+.btn-home a {
+    margin: 0 10px;
+}
+
+.btn {
     position: absolute;
     display: block;
     color: white;
@@ -179,10 +193,6 @@ section a {
 }
 
 .btn::before {
-
-    /*EL CODIGO DE COMO SE DA LA ANIMACION AL BOTON, EN CASO DE
-    QUE USEN BOTONES PUEDEN ISPIRARSE DE ESTO*/
-
     background: #ff7675;
     content: "";
     position: absolute;
@@ -194,45 +204,155 @@ section a {
 }
 
 .btn1::before {
-
-    /*EL CODIGO DE COMO SE DA LA ANIMACION AL BOTON, EN CASO DE
-    QUE USEN BOTONES PUEDEN ISPIRARSE DE ESTO*/
-
     width: 100%;
     height: 0%;
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .btn1:hover::before {
-
-    /*EL CODIGO DE COMO SE DA LA ANIMACION AL BOTON, EN CASO DE
-    QUE USEN BOTONES PUEDEN ISPIRARSE DE ESTO*/
-
     height: 380%;
 }
 
+section a { 
+    display: block;
+    padding: 7px 0;
+    text-decoration: none;
+    text-align: center;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*SECCION 2*/
 section:nth-child(3) {
     background-image: linear-gradient(15deg, #13547a 0%, #8c80d0 100%);
-    /*https://webgradients.com/  
-    EN ESA PAGINA PUEDEN ENCONTRAR LOS
-     CODIGOS PARA LOS GRADIENTES EN CSS*/
 }
 
-html {
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
 
-    /*EL CODIGO DE COMO SE DA LA ANIMACION AL SCROLL*/
-
-    scroll-behavior: smooth;
 }
 
+.box-container .box {
+    height: 11rem;
+    width: 17rem;
+    background: #101010;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgba(0, 0 , 0, .5);
+    margin: 2rem;   
+}
+.box-container .box {
+    height: 12rem;
+    width: 20rem;
+    background: #101010;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgba(0, 0 , 0, .5);
+    margin: 2rem;   
+}
 
-section:nth-child(5) { 
+.box-container .box i {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    background: #9c27b0;
+    font-size: 2rem;
+    margin: 1rem 0;
+
+}
+
+.box-container .box h3 {
+    font-size: 20px;
+    color: #9c27b0;
+
+}
+
+/*TEXTO*/
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 100px;
+}
+
+p2{
+    margin-bottom: 20px;
+    
+    text-align: justify;
+    color: #fff;
+    
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+p {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 24px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.body-post p {
+    font-size: 16px;
+    color: #101828;
+    line-height: 24px;
+}
+
+.content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sau {
+    padding: 30px;
+    background: #1f1d1d
+}
+
+.box-container .box p {
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.about {
+    background: #171717;
+}
+
+/*FORMATO PARA SECCION 3, 4 Y CONTACTOS*/
+section:nth-child(4) {
+    background-image: linear-gradient(15deg, #304450 0%, #5548a4 100%);
+}
+
+section:nth-child(5) {
+    background-image: linear-gradient(15deg, #1b76ab 0%, #bd55bf 100%);
+}
+
+section:nth-child(6) { 
     /*Este es fondo de contactos, cuando esten listas sus partes subanle un index a esta*/
     background-image: url("../Imagenes/fondo_contactos.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+/*CONTACTOS*/
 .box1
 {
     width: 200px;
@@ -281,13 +401,11 @@ section:nth-child(5) {
     transform: translateY(-8px);
 }
 
-
-
 .box2
 {
     width: 200px;
     height: 200px;
-    background-image: url(../Imagenes/fondo_easter.gif); /*Aqui tienen que remplazar con su foto*/
+    background-image: url(../Imagenes/marlow.jpg); /*Aqui tienen que remplazar con su foto*/
     background-size: cover;
     border-radius: 50%;
     border: 3px solid #fff;
@@ -317,7 +435,6 @@ section:nth-child(5) {
 
 .box2 ul li a
 {
-    
     text-decoration: none;
     text-align: right;
     width: 60px;
@@ -330,7 +447,7 @@ section:nth-child(5) {
 {
     width: 200px;
     height: 200px;
-    background-image: url(../Imagenes/fondo_1.jpg); /*Aqui tienen que remplazar con su foto*/
+    background-image: url(../Imagenes/jhona.jpg); /*Aqui tienen que remplazar con su foto*/
     background-size: cover;
     border-radius: 50%;
     border: 3px solid #fff;
@@ -361,7 +478,6 @@ section:nth-child(5) {
 
 .box3 ul li a
 {
-    
     text-decoration: none;
     text-align: right;
     width: 60px;
@@ -382,6 +498,31 @@ h4
     font-family: times 'Times New Roman';
     color: #ffffff;
     
+}
+
+table{
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+
+#sec3 .title1 {
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-right: 10px solid #ffffff;
+}
+
+/*SCROLL*/
+html {
+    scroll-behavior: smooth;
 }
 
 /*TODO LO QUE COMIENCE POR @ SON LOS TIEMPOS, ANIMACIONES,
@@ -410,22 +551,5 @@ TRANSICIONES ETC DE LA PAGINA*/
 
     .section>img {
         height: 25%;
-    }
-}
-
-@keyframes typing {
-
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
     }
 }
